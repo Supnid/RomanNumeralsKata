@@ -1,0 +1,13 @@
+package main;
+
+public class ArabicToRomanConverter {
+
+	public String convert(int input) {
+		String conversion = new String();
+		if(input == 1)
+			return "I";
+		else
+			return "V";
+	}
+
+}

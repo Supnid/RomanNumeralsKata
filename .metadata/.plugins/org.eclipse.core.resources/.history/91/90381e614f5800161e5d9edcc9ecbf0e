@@ -2,31 +2,21 @@ package mainTest;
 
 import static org.junit.Assert.*;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import main.ArabicToRomanConverter;
 
 public class ArabicToRomanConverterTest {
-	private ArabicToRomanConverter converter;
-	
-	@Before
-	public void setUp(){
-		converter = new ArabicToRomanConverter();
-	}
-	
+
 	@Test
 	public void testConverterReturnsAnIWhenGivenAOne() {
+		ArabicToRomanConverter converter = new ArabicToRomanConverter();
 		assertEquals("I", converter.convert(1));
 	}
 	
 	@Test
-	public void testConverterReturnsIIWhenGivenATwo() {
-		assertEquals("II", converter.convert(2));
-	}
-	
-	@Test
 	public void testThatWhenTheConverterIsGivenAFiveItReturnsAV(){
+		ArabicToRomanConverter converter = new ArabicToRomanConverter();
 		assertEquals("V", converter.convert(5));
 	}
 

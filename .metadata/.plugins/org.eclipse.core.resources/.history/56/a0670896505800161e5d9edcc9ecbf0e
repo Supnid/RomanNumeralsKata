@@ -8,11 +8,11 @@ import org.junit.Test;
 import main.ArabicToRomanConverter;
 
 public class ArabicToRomanConverterTest {
-	private ArabicToRomanConverter converter;
+	ArabicToRomanConverter converter;
 	
 	@Before
 	public void setUp(){
-		converter = new ArabicToRomanConverter();
+		ArabicToRomanConverter converter = new ArabicToRomanConverter();
 	}
 	
 	@Test

@@ -12,7 +12,7 @@ public class ArabicToRomanConverterTest {
 	
 	@Before
 	public void setUp(){
-		converter = new ArabicToRomanConverter();
+		ArabicToRomanConverter converter = new ArabicToRomanConverter();
 	}
 	
 	@Test
