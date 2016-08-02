@@ -9,15 +9,9 @@ import main.ArabicToRomanConverter;
 public class ArabicToRomanConverterTest {
 
 	@Test
-	public void testConverterReturnsAnIWhenGivenAOne() {
+	public void test() {
 		ArabicToRomanConverter converter = new ArabicToRomanConverter();
 		assertEquals("I", converter.convert(1));
-	}
-	
-	@Test
-	public void testThatWhenTheConverterIsGivenAFiveItReturnsAV(){
-		ArabicToRomanConverter converter = new ArabicToRomanConverter();
-		assertEquals("V", converter.convert(5));
 	}
 
 }

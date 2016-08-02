@@ -17,7 +17,7 @@ public class ArabicToRomanConverterTest {
 	@Test
 	public void testThatWhenTheConverterIsGivenAFiveItReturnsAV(){
 		ArabicToRomanConverter converter = new ArabicToRomanConverter();
-		assertEquals("V", converter.convert(5));
+		assertEquals("X", converter.convert(5));
 	}
 
 }
