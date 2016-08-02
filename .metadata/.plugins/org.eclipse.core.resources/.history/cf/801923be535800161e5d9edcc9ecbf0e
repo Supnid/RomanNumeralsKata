@@ -5,6 +5,8 @@ public class ArabicToRomanConverter {
 	public String convert(int input) {
 		String romanNumeral = new String();
 		
+		System.out.println(input % 10);
+		
 		if(input == 1000){
 			romanNumeral += "M";
 		}else if(input == 500){
@@ -13,7 +15,8 @@ public class ArabicToRomanConverter {
 			romanNumeral += "C";
 		}else if(input == 50){
 			romanNumeral += "L";
-		}else if(input == 10){
+		}
+		else if(input == 10){
 			romanNumeral += "X";
 		}else if(input == 5){
 			romanNumeral += "V";

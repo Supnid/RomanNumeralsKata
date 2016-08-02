@@ -59,10 +59,5 @@ public class ArabicToRomanConverterTest {
 	public void testConverterReturnsDWhenGivenFiveHundred(){
 		assertEquals("D", converter.convert(500));
 	}
-	
-	@Test
-	public void testConverterReturnsMWhenGivenOneThousand(){
-		assertEquals("M", converter.convert(1000));
-	}
 
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun mainTest.ArabicToRomanConverterTest" project="RomanNumeralsArabicNumbersKata" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="mainTest.ArabicToRomanConverterTest" time="0.0">
+    <testcase name="testConverterReturnsIIWhenGivenATwo" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testConverterReturnsCWhenGivenOneHundred" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testConverterReturnsVWhenGivenAFive" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testConverterReturnsLWhenGivenAFifty" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testConverterReturnsXWhenGivenATen" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testConverterReturnsIIIWhenGivenAThree" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testConverterReturnsAnIWhenGivenAOne" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testConverterReturnsIVWhenGivenAFour" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+  </testsuite>
+</testrun>

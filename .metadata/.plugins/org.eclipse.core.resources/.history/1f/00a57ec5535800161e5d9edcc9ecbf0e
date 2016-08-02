@@ -5,6 +5,8 @@ public class ArabicToRomanConverter {
 	public String convert(int input) {
 		String romanNumeral = new String();
 		
+		System.out.println(input % 10);
+		
 		if(input == 1000){
 			romanNumeral += "M";
 		}else if(input == 500){
