@@ -3,40 +3,27 @@ package main;
 public class ArabicToRomanConverter {
 
 	public String convert(int input) {
-		System.out.println("---------------------------");
 		String romanNumeral = new String();
-		
-		System.out.println(input);
 		
 		if(input >= 1000){
 			romanNumeral += "M";
 			input -= 1000;
-			System.out.println(input);
-		}if(input >= 500){
+		}else if(input == 500){
 			romanNumeral += "D";
-			input -= 500;
-		}if(input >= 100){
+		}else if(input == 100){
 			romanNumeral += "C";
-			input -= 100;
-		}if(input >= 50){
+		}else if(input == 50){
 			romanNumeral += "L";
-			input -= 50;
-		}if(input >= 10){
+		}else if(input == 10){
 			romanNumeral += "X";
-			input -= 10;
-		}if(input >= 5){
+		}else if(input == 5){
 			romanNumeral += "V";
-			input -= 5;
-		}if(input >= 4){
+		}else if(input == 4){
 			romanNumeral += "IV";
-			input -= 4;
-		}if(input > 0){
+		}else{
 			for(int i = 0; i < input; i++)
 				romanNumeral += "I";
 		}
-		
-		System.out.println("---------------------------");
-		
 		return romanNumeral;
 	}
 

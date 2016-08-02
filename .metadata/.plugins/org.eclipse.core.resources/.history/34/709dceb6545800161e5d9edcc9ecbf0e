@@ -1,0 +1,30 @@
+package main;
+
+public class ArabicToRomanConverter {
+
+	public String convert(int input) {
+		String romanNumeral = new String();
+		
+		if(input >= 1000){
+			romanNumeral += "M";
+			romanNumeral -= 1000;
+		}else if(input == 500){
+			romanNumeral += "D";
+		}else if(input == 100){
+			romanNumeral += "C";
+		}else if(input == 50){
+			romanNumeral += "L";
+		}else if(input == 10){
+			romanNumeral += "X";
+		}else if(input == 5){
+			romanNumeral += "V";
+		}else if(input == 4){
+			romanNumeral += "IV";
+		}else{
+			for(int i = 0; i < input; i++)
+				romanNumeral += "I";
+		}
+		return romanNumeral;
+	}
+
+}
