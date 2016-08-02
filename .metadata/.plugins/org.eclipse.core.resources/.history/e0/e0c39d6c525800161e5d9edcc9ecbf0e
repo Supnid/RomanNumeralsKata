@@ -44,10 +44,5 @@ public class ArabicToRomanConverterTest {
 	public void testConverterReturnsXWhenGivenATen(){
 		assertEquals("X", converter.convert(10));
 	}
-	
-	@Test
-	public void testConverterReturnsLWhenGivenAFifty(){
-		assertEquals("L", converter.convert(50));
-	}
 
 }
