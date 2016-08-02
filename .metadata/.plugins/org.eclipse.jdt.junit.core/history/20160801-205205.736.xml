@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ArabicToRomanConverterTest" project="RomanNumeralsArabicNumbersKata" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="mainTest.ArabicToRomanConverterTest" time="0.0">
+    <testcase name="initializationError" classname="mainTest.ArabicToRomanConverterTest" time="0.0">
+      <error>java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing&#13;
+	at java.lang.ClassLoader.defineClass1(Native Method)&#13;
+	at java.lang.ClassLoader.defineClass(Unknown Source)&#13;
+	at java.security.SecureClassLoader.defineClass(Unknown Source)&#13;
+	at java.net.URLClassLoader.defineClass(Unknown Source)&#13;
+	at java.net.URLClassLoader.access$100(Unknown Source)&#13;
+	at java.net.URLClassLoader$1.run(Unknown Source)&#13;
+	at java.net.URLClassLoader$1.run(Unknown Source)&#13;
+	at java.security.AccessController.doPrivileged(Native Method)&#13;
+	at java.net.URLClassLoader.findClass(Unknown Source)&#13;
+	at java.lang.ClassLoader.loadClass(Unknown Source)&#13;
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)&#13;
+	at java.lang.ClassLoader.loadClass(Unknown Source)&#13;
+	at org.junit.internal.builders.JUnit4Builder.runnerForClass(JUnit4Builder.java:10)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:33)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createUnfilteredTest(JUnit4TestLoader.java:84)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createTest(JUnit4TestLoader.java:70)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.loadTests(JUnit4TestLoader.java:43)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:444)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: java.lang.ClassNotFoundException: org.hamcrest.SelfDescribing&#13;
+	at java.net.URLClassLoader.findClass(Unknown Source)&#13;
+	at java.lang.ClassLoader.loadClass(Unknown Source)&#13;
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)&#13;
+	at java.lang.ClassLoader.loadClass(Unknown Source)&#13;
+	... 24 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>
