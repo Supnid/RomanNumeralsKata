@@ -5,9 +5,7 @@ public class ArabicToRomanConverter {
 	public String convert(int input) {
 		String romanNumeral = new String();
 		
-		if(input == 100){
-			romanNumeral += "C";
-		}else if(input == 50){
+		if(input == 50){
 			romanNumeral += "L";
 		}
 		else if(input == 10){
