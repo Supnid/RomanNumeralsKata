@@ -32,7 +32,7 @@ public class ArabicToRomanConverterTest {
 	
 	@Test
 	public void testConverterReturnsIVWhenGivenAFour() {
-		assertEquals("IV", converter.convert(4));
+		assertEquals("IV", converter.convert(3));
 	}
 	
 	@Test
