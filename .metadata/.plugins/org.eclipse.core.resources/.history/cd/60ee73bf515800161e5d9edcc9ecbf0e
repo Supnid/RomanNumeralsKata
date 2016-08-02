@@ -36,13 +36,8 @@ public class ArabicToRomanConverterTest {
 	}
 	
 	@Test
-	public void testConverterReturnsVWhenGivenAFive(){
+	public void testThatWhenTheConverterIsGivenAFiveItReturnsAV(){
 		assertEquals("V", converter.convert(5));
-	}
-	
-	@Test
-	public void testConverterReturnsXWhenGivenATen(){
-		assertEquals("X", converter.convert(10));
 	}
 
 }

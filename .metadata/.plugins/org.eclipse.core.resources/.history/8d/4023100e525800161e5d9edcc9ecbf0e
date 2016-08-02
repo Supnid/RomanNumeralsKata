@@ -4,9 +4,7 @@ public class ArabicToRomanConverter {
 
 	public String convert(int input) {
 		String romanNumeral = new String();
-		if(input == 10){
-			romanNumeral += "X";
-		}else if(input == 5){
+		if(input == 5){
 			romanNumeral += "V";
 		}else if(input == 4){
 			romanNumeral += "IV";
