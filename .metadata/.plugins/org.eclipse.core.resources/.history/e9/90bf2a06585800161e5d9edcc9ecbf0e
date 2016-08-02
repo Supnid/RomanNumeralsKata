@@ -5,7 +5,7 @@ public class ArabicToRomanConverter {
 	public String convert(int input) {
 		String romanNumeral = new String();
 		
-		while(input >= 1000){
+		if(input >= 1000){
 			romanNumeral += "M";
 			input -= 1000;
 		}
@@ -45,7 +45,7 @@ public class ArabicToRomanConverter {
 			input -= 40;
 		}
 		
-		while(input >= 10){
+		if(input >= 10){
 			romanNumeral += "X";
 			input -= 10;
 		}

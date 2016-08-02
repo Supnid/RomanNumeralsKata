@@ -74,9 +74,4 @@ public class ArabicToRomanConverterTest {
 	public void testConverterReturnsMLXVIWhenGiven1066(){
 		assertEquals("MLXVI", converter.convert(1066));
 	}
-	
-	@Test
-	public void testConverterReturnsMLXVIWhenGiven1989(){
-		assertEquals("MCMLXXXIX", converter.convert(1989));
-	}
 }
