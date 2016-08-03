@@ -13,31 +13,31 @@ public class ArabicToRomanConverter {
 			romanNumeral += "M";
 			input -= 1000;
 		}
-		while(input >= 900){
+		if(input >= 900){
 			romanNumeral += "CM";
 			input -= 900;
 		}
-		while(input >= 500){
+		if(input >= 500){
 			romanNumeral += "D";
 			input -= 500;
 		}
-		while(input >= 400){
+		if(input >= 400){
 			romanNumeral += "CD";
 			input -= 400;
 		}
-		while(input >= 100){
+		if(input >= 100){
 			romanNumeral += "C";
 			input -= 100;
 		}
-		while(input >= 90){
+		if(input >= 90){
 			romanNumeral += "XC";
 			input -= 90;
 		}
-		while(input >= 50){
+		if(input >= 50){
 			romanNumeral += "L";
 			input -= 50;
 		}
-		while(input >= 40){
+		if(input >= 40){
 			romanNumeral += "XL";
 			input -= 40;
 		}
@@ -45,15 +45,15 @@ public class ArabicToRomanConverter {
 			romanNumeral += "X";
 			input -= 10;
 		}
-		while(input >= 9){
+		if(input >= 9){
 			romanNumeral += "IX";
 			input -= 9;
 		}
-		while(input >= 5){
+		if(input >= 5){
 			romanNumeral += "V";
 			input -= 5;
 		}
-		while(input >= 4){
+		if(input >= 4){
 			romanNumeral += "IV";
 			input -= 4;
 		}

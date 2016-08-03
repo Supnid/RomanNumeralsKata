@@ -96,7 +96,6 @@ public class ArabicToRomanConverterTest {
 	@Test
 	public void testRandomlyChosenNumbersReturnCorrectRomanNumeralFormat(){
 		assertEquals("MMMCMXCIX", converter.convert(3999));
-		assertEquals("DCC", converter.convert(700));
 		assertEquals("MDCCLXXVII", converter.convert(1777));
 		assertEquals("CCCLXXVIII", converter.convert(378));
 		assertEquals("MMCCXXII", converter.convert(2222));
