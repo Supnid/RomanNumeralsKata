@@ -1,5 +1,7 @@
 package main;
 
+import java.util.ArrayList;
+
 public class ArabicToRomanConverter {
 
 	private String romanNumeralOutput = new String();
