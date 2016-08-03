@@ -1,0 +1,106 @@
+package mainTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import main.ArabicToRomanConverter;
+
+public class ArabicToRomanConverterTest {
+	private ArabicToRomanConverter converter;
+	
+	@Before
+	public void setUp(){
+		converter = new ArabicToRomanConverter();
+	}
+	
+	@Test
+	public void testConverterReturnsAnIWhenGivenAOne() {
+		assertEquals("I", converter.convert(1));
+	}
+	
+	@Test
+	public void testConverterReturnsIIWhenGivenATwo() {
+		assertEquals("II", converter.convert(2));
+	}
+	
+	@Test
+	public void testConverterReturnsIIIWhenGivenAThree() {
+		assertEquals("III", converter.convert(3));
+	}
+	
+	@Test
+	public void testConverterReturnsIVWhenGivenAFour() {
+		assertEquals("IV", converter.convert(4));
+	}
+	
+	@Test
+	public void testConverterReturnsVWhenGivenAFive(){
+		assertEquals("V", converter.convert(5));
+	}
+
+	@Test
+	public void testConverterReturnsIXWhenGivenANine(){
+		assertEquals("IX", converter.convert(9));
+	}
+	
+	@Test
+	public void testConverterReturnsXWhenGivenATen(){
+		assertEquals("X", converter.convert(10));
+	}
+	
+	@Test
+	public void testConverterReturnsLWhenGivenAFifty(){
+		assertEquals("L", converter.convert(50));
+	}
+	
+	@Test
+	public void testConverterReturnsCWhenGivenOneHundred(){
+		assertEquals("C", converter.convert(100));
+	}
+	
+	@Test
+	public void testConverterReturnsDWhenGivenFiveHundred(){
+		assertEquals("D", converter.convert(500));
+	}
+	
+	@Test
+	public void testConverterReturnsMWhenGivenOneThousand(){
+		assertEquals("M", converter.convert(1000));
+	}
+	
+	@Test
+	public void testConverterReturnsMIWhenGivenOneThousandAndOne(){
+		assertEquals("MI", converter.convert(1001));
+	}
+	
+	@Test
+	public void testConverterReturnsMLXVIWhenGiven1066(){
+		assertEquals("MLXVI", converter.convert(1066));
+	}
+	
+	@Test
+	public void testConverterReturnsMLXVIWhenGiven1989(){
+		assertEquals("MCMLXXXIX", converter.convert(1989));
+	}
+	
+	@Test
+	public void testEdgeCases0AndBelowAsWellAs4000AndAbove(){
+		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(0));
+		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(-101));
+		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(4000));
+		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(5001));
+	}
+	
+	@Test
+	public void testRandomlyChosenNumbersReturnCorrectRomanNumeralFormat(){
+		assertEquals("MMMCMXCIX", converter.convert(3999));
+		assertEquals("DCC", converter.convert(700));
+		assertEquals("MDCCLXXVII", converter.convert(1777));
+		assertEquals("CCCLXXVIII", converter.convert(378));
+		assertEquals("MMCCXXII", converter.convert(2222));
+		assertEquals("MMCDXVII", converter.convert(2417));
+	}
+}

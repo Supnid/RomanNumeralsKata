@@ -1,0 +1,88 @@
+package main;
+
+import java.util.ArrayList;
+
+public class ArabicToRomanConverter {
+	private int userEnteredValue;
+	private String romanNumeralOutput = new String();
+	
+	public String convert(int input) {
+		if(input > 3999 || input < 1){
+			return "The number you entered could not be converted. Please try another number.";
+		}
+		
+		userEnteredValue = input;
+		
+//		int[] romanNumeralsAsNumbers = {1000, 900, 500, 400, 100, 90, 50,  40, 10, 9, 5, 4};
+//		String[] romanNumeralsAsStrings = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV"};
+		
+//		int index = 0;	
+		
+//		createRomanNumeralString("M", 1000);
+		
+		
+		
+		while(input >= 1000){
+			romanNumeralOutput += "M";
+			userEnteredValue -= 1000;
+		}
+		while(userEnteredValue >= 900){
+			romanNumeralOutput += "CM";
+			userEnteredValue -= 900;
+		}
+		while(userEnteredValue >= 500){
+			romanNumeralOutput += "D";
+			userEnteredValue -= 500;
+		}
+		while(userEnteredValue >= 400){
+			romanNumeralOutput += "CD";
+			userEnteredValue -= 400;
+		}
+		while(userEnteredValue >= 100){
+			romanNumeralOutput += "C";
+			userEnteredValue -= 100;
+		}
+		while(userEnteredValue >= 90){
+			romanNumeralOutput += "XC";
+			userEnteredValue -= 90;
+		}
+		while(userEnteredValue >= 50){
+			romanNumeralOutput += "L";
+			userEnteredValue -= 50;
+		}
+		while(userEnteredValue >= 40){
+			romanNumeralOutput += "XL";
+			userEnteredValue -= 40;
+		}
+		while(userEnteredValue >= 10){
+			romanNumeralOutput += "X";
+			userEnteredValue -= 10;
+		}
+		while(userEnteredValue >= 9){
+			romanNumeralOutput += "IX";
+			userEnteredValue -= 9;
+		}
+		while(userEnteredValue >= 5){
+			romanNumeralOutput += "V";
+			userEnteredValue -= 5;
+		}
+		while(userEnteredValue >= 4){
+			romanNumeralOutput += "IV";
+			userEnteredValue -= 4;
+		}
+		if(userEnteredValue > 0){
+			for(int i = 0; i < input; i++)
+				romanNumeralOutput += "I";
+		}
+		
+		return romanNumeralOutput;
+	}
+	
+	private void createRomanNumeralString(String romanNumeral, int arabicNumber){
+		while(userEnteredValue >= arabicNumber){
+			romanNumeralOutput += romanNumeral;
+			userEnteredValue -= arabicNumber;
+		}
+	}
+
+}

@@ -1,0 +1,49 @@
+package main;
+
+import java.util.ArrayList;
+
+public class ArabicToRomanConverter {
+	private int userEnteredValue;
+	
+	public String convert(int input) {
+		if(input > 3999 || input < 1){
+			return "The number you entered could not be converted. Please try another number.";
+		}
+		
+		userEnteredValue = input;
+		
+		String romanNumeralOutput = new String();
+//		int[] romanNumeralsAsNumbers = {1000, 900, 500, 400, 100, 90, 50,  40, 10, 9, 5, 4};
+//		String[] romanNumeralsAsStrings = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV"};
+		
+//		int index = 0;	
+		
+		createRomanNumeralString("M", 1000);
+		createRomanNumeralString("CM", 900);
+		createRomanNumeralString("D", 500);
+		createRomanNumeralString("CD", 400);
+		createRomanNumeralString("C", 100);
+		createRomanNumeralString("XC", 90);
+		createRomanNumeralString("L", 50);
+		createRomanNumeralString("XL", 40);
+		createRomanNumeralString("X", 10);
+		createRomanNumeralString("IX", 9);
+		createRomanNumeralString("V", 5);
+		createRomanNumeralString("IV", 4);
+
+		if(input > 0){
+			for(int i = 0; i < input; i++)
+				romanNumeralOutput += "I";
+		}
+		
+		return romanNumeralOutput;
+	}
+	
+	private void createRomanNumeralString(String romanNumeral, int valueEnteredByUser){
+		while(input >= 900){
+			romanNumeralOutput += "CM";
+			input -= 900;
+		}
+	}
+
+}

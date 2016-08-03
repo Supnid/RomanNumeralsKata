@@ -1,0 +1,74 @@
+package main;
+
+import java.util.ArrayList;
+
+public class ArabicToRomanConverter {
+
+	public String convert(int input) {
+		if(input > 3999 || input < 1){
+			return "The number you entered could not be converted. Please try another number.";
+		}
+		
+		String romanNumeralOutput = new String();
+		int[] romanNumeralsAsNumbers = {1000, 900, 500, 400, 100, 90, 50,  40, 10, 9, 5, 4};
+		String[] romanNumeralsAsStrings = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV"};
+		
+		int index = 0;	
+		
+		while(input >= 1000){
+			romanNumeralOutput += "M";
+			input -= 1000;
+		}
+		while(input >= 900){
+			romanNumeralOutput += "CM";
+			input -= 900;
+		}
+		while(input >= 500){
+			romanNumeralOutput += "D";
+			input -= 500;
+		}
+		while(input >= 400){
+			romanNumeralOutput += "CD";
+			input -= 400;
+		}
+		while(input >= 100){
+			romanNumeralOutput += "C";
+			input -= 100;
+		}
+		while(input >= 90){
+			romanNumeralOutput += "XC";
+			input -= 90;
+		}
+		while(input >= 50){
+			romanNumeralOutput += "L";
+			input -= 50;
+		}
+		while(input >= 40){
+			romanNumeralOutput += "XL";
+			input -= 40;
+		}
+		while(input >= 10){
+			romanNumeralOutput += "X";
+			input -= 10;
+		}
+		while(input >= 9){
+			romanNumeralOutput += "IX";
+			input -= 9;
+		}
+		while(input >= 5){
+			romanNumeralOutput += "V";
+			input -= 5;
+		}
+		while(input >= 4){
+			romanNumeralOutput += "IV";
+			input -= 4;
+		}
+		if(input > 0){
+			for(int i = 0; i < input; i++)
+				romanNumeralOutput += "I";
+		}
+		
+		return romanNumeralOutput;
+	}
+
+}

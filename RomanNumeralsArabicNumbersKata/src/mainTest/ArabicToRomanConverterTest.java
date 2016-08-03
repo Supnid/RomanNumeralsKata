@@ -2,6 +2,7 @@ package mainTest;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -96,10 +97,20 @@ public class ArabicToRomanConverterTest {
 	@Test
 	public void testRandomlyChosenNumbersReturnCorrectRomanNumeralFormat(){
 		assertEquals("MMMCMXCIX", converter.convert(3999));
+		
+		converter = new ArabicToRomanConverter();
 		assertEquals("DCC", converter.convert(700));
+		
+		converter = new ArabicToRomanConverter();
 		assertEquals("MDCCLXXVII", converter.convert(1777));
+		
+		converter = new ArabicToRomanConverter();
 		assertEquals("CCCLXXVIII", converter.convert(378));
+		
+		converter = new ArabicToRomanConverter();
 		assertEquals("MMCCXXII", converter.convert(2222));
+		
+		converter = new ArabicToRomanConverter();
 		assertEquals("MMCDXVII", converter.convert(2417));
 	}
 }
