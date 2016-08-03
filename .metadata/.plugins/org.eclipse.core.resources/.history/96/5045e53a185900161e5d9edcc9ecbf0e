@@ -86,10 +86,10 @@ public class ArabicToRomanConverterTest {
 	}
 	
 	@Test
-	public void testEdgeCases0AndBelowAsWellAs4000AndAbove(){
+	public void testEdgeCases0AndBelowAsWellAs3999AndAbove(){
 		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(0));
-		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(-101));
+		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(-1));
+		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(3999));
 		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(4000));
-		assertEquals("The number you entered could not be converted. Please try another number.", converter.convert(5001));
 	}
 }

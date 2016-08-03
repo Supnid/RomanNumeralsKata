@@ -3,60 +3,68 @@ package main;
 public class ArabicToRomanConverter {
 
 	public String convert(int input) {
-		if(input > 3999 || input < 1){
-			return "The number you entered could not be converted. Please try another number.";
-		}
-		
 		String romanNumeral = new String();
 		
 		while(input >= 1000){
 			romanNumeral += "M";
 			input -= 1000;
 		}
+		
 		if(input >= 900){
 			romanNumeral += "CM";
 			input -= 900;
 		}
+		
 		if(input >= 500){
 			romanNumeral += "D";
 			input -= 500;
 		}
+		
 		if(input >= 400){
 			romanNumeral += "CD";
 			input -= 400;
 		}
+		
 		if(input >= 100){
 			romanNumeral += "C";
 			input -= 100;
 		}
+		
 		if(input >= 90){
 			romanNumeral += "XC";
 			input -= 90;
 		}
+		
 		if(input >= 50){
 			romanNumeral += "L";
 			input -= 50;
 		}
+		
 		if(input >= 40){
 			romanNumeral += "XL";
 			input -= 40;
 		}
+		
 		while(input >= 10){
 			romanNumeral += "X";
 			input -= 10;
 		}
+		
 		if(input >= 9){
 			romanNumeral += "IX";
 			input -= 9;
 		}
+		
 		if(input >= 5){
 			romanNumeral += "V";
 			input -= 5;
 		}
+		
 		if(input >= 4){
 			romanNumeral += "IV";
 			input -= 4;
 		}
+		
 		if(input > 0){
 			for(int i = 0; i < input; i++)
 				romanNumeral += "I";

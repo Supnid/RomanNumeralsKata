@@ -4,7 +4,7 @@ public class ArabicToRomanConverter {
 
 	public String convert(int input) {
 		if(input > 3999 || input < 1){
-			return "The number you entered could not be converted. Please try another number.";
+			return "The number you have entered could not be converted. Please try another number.";
 		}
 		
 		String romanNumeral = new String();
