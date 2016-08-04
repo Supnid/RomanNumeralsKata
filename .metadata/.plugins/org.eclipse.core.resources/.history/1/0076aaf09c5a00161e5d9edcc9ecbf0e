@@ -9,13 +9,8 @@ import main.RomanToArabicConverter;
 public class RomanToArabicConverterTest {
 
 	@Test
-	public void testWhenConverterIsPassedIThat1IsReturned() {
+	public void test() {
 		assertEquals(1, new RomanToArabicConverter().convert("I"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedMThat1000IsReturned() {
-		assertEquals(1000, new RomanToArabicConverter().convert("M"));
 	}
 
 }

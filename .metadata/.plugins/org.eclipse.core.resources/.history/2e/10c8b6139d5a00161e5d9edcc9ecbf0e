@@ -5,9 +5,8 @@ public class RomanToArabicConverter {
 	public int convert(String romanNumeral) {
 		if(romanNumeral.equals("M")){
 			return 1000;
-		}else{
+		}else
 			return 1;
-		}
 	}
 
 }
