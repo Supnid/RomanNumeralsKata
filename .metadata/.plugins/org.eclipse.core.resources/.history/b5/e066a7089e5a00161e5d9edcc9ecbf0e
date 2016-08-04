@@ -6,7 +6,7 @@ public class RomanToArabicConverter {
 		if(romanNumeral.equals("M")){
 			return 1000;
 		}else if(romanNumeral.equals("CM")){
-			return 900;
+			return 1000;
 		}else if(romanNumeral.equals("IV")){
 			return 4;
 		}else{
