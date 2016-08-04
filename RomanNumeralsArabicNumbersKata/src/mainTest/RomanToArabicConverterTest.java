@@ -1,0 +1,16 @@
+package mainTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import main.RomanToArabicConverter;
+
+public class RomanToArabicConverterTest {
+
+	@Test
+	public void test() {
+		assertEquals(1, new RomanToArabicConverter().convert("I"));
+	}
+
+}
