@@ -2,7 +2,7 @@ package main;
 
 public class ArabicToRomanConverter {
 
-	private String romanNumeralOutput;
+	private String romanNumeralOutput = new String();
 	private int userInput;
 	
 	public String convert(int input) {
@@ -10,7 +10,6 @@ public class ArabicToRomanConverter {
 			return "The number you entered could not be converted. Please try another number.";
 		}				
 		
-		romanNumeralOutput = new String();
 		userInput = input;
 		
 		createRomanNumeralString("M", 1000);

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun mainTest.ArabicToRomanConverterTest" project="RomanNumeralsArabicNumbersKata" tests="16" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="mainTest.ArabicToRomanConverterTest" incomplete="true">
+    <testcase name="testConverterReturnsIIWhenGivenATwo" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testConverterReturnsCWhenGivenOneHundred" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testConverterReturnsVWhenGivenAFive" classname="mainTest.ArabicToRomanConverterTest" time="0.0"/>
+    <testcase name="testRandomlyChosenNumbersReturnCorrectRomanNumeralFormat" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsLWhenGivenAFifty" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsMIWhenGivenOneThousandAndOne" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsMLXVIWhenGiven1066" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsMLXVIWhenGiven1989" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsXWhenGivenATen" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsDWhenGivenFiveHundred" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsIIIWhenGivenAThree" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsIXWhenGivenANine" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsAnIWhenGivenAOne" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testEdgeCases0AndBelowAsWellAs4000AndAbove" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsMWhenGivenOneThousand" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+    <testcase name="testConverterReturnsIVWhenGivenAFour" classname="mainTest.ArabicToRomanConverterTest" incomplete="true"/>
+  </testsuite>
+</testrun>

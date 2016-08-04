@@ -2,7 +2,7 @@ package main;
 
 public class ArabicToRomanConverter {
 
-	private String romanNumeralOutput;
+	private String romanNumeralOutput = new String();
 	private int userInput;
 	
 	public String convert(int input) {
