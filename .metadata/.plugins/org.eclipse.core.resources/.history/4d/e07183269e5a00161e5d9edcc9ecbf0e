@@ -19,11 +19,6 @@ public class RomanToArabicConverterTest {
 	}
 	
 	@Test
-	public void testWhenConverterIsPassedDThat500IsReturned() {
-		assertEquals(500, new RomanToArabicConverter().convert("D"));
-	}
-	
-	@Test
 	public void testWhenConverterIsPassedCMThat900IsReturned() {
 		assertEquals(900, new RomanToArabicConverter().convert("CM"));
 	}
