@@ -15,7 +15,7 @@ public class RomanToArabicConverter {
 						|| upperCaseRomanNumeralInput.contains("DD") || upperCaseRomanNumeralInput.matches("[A-B]")
 							|| upperCaseRomanNumeralInput.matches("[E-H]") || upperCaseRomanNumeralInput.matches("[J-K]")
 								|| upperCaseRomanNumeralInput.matches("[N-U]") || upperCaseRomanNumeralInput.contains("W")
-									|| upperCaseRomanNumeralInput.matches("[Y-Z]") || upperCaseRomanNumeralInput.matches("[0-9]")){
+									|| upperCaseRomanNumeralInput.matches("[Y-Z]")){
 			return -1;
 		}
 		

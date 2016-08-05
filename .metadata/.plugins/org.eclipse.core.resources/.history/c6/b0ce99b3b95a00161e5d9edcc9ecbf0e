@@ -111,20 +111,6 @@ public class RomanToArabicConverterTest {
 		assertEquals(-1, converter.convert("W"));
 		assertEquals(-1, converter.convert("Y"));
 		assertEquals(-1, converter.convert("Z"));
-	}
-	
-	@Test
-	public void testNumbersAreRejectedByTheConverter(){
-		RomanToArabicConverter converter = new RomanToArabicConverter();
-		assertEquals(-1, converter.convert("0"));
-		assertEquals(-1, converter.convert("1"));
-		assertEquals(-1, converter.convert("2"));
-		assertEquals(-1, converter.convert("3"));
-		assertEquals(-1, converter.convert("4"));
-		assertEquals(-1, converter.convert("5"));
-		assertEquals(-1, converter.convert("6"));
-		assertEquals(-1, converter.convert("7"));
-		assertEquals(-1, converter.convert("8"));
-		assertEquals(-1, converter.convert("9"));
+		
 	}
 }
