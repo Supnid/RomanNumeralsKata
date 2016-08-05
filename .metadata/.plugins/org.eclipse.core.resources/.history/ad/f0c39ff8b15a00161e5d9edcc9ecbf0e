@@ -16,22 +16,58 @@ public class RomanToArabicConverter {
 				createArabicNumberFromRomanNumerals(1000);
 			}
 			if(romanNumeral.charAt(i) == 'D'){
-				createArabicNumberFromRomanNumerals(500);
+				if(previousRomanNumeralCharacterAsArabic > 500){
+					arabicNumber -= 500;
+				}else{
+					arabicNumber += 500;
+				}
+
+				previousRomanNumeralCharacterAsArabic = 500;
 			}
 			if(romanNumeral.charAt(i) == 'C'){
-				createArabicNumberFromRomanNumerals(100);
+				if(previousRomanNumeralCharacterAsArabic > 100){
+					arabicNumber -= 100;
+				}else{
+					arabicNumber += 100;
+				}
+
+				previousRomanNumeralCharacterAsArabic = 100;
 			}
 			if(romanNumeral.charAt(i) == 'L'){
-				createArabicNumberFromRomanNumerals(50);
+				if(previousRomanNumeralCharacterAsArabic > 50){
+					arabicNumber -= 50;
+				}else{
+					arabicNumber += 50;
+				}
+
+				previousRomanNumeralCharacterAsArabic = 50;
 			}
 			if(romanNumeral.charAt(i) == 'X'){
-				createArabicNumberFromRomanNumerals(10);
+				if(previousRomanNumeralCharacterAsArabic > 10){
+					arabicNumber -= 10;
+				}else{
+					arabicNumber += 10;
+				}
+
+				previousRomanNumeralCharacterAsArabic = 5;
 			}
 			if(romanNumeral.charAt(i) == 'V'){
-				createArabicNumberFromRomanNumerals(5);
+				if(previousRomanNumeralCharacterAsArabic > 5){
+					arabicNumber -= 5;
+				}else{
+					arabicNumber += 5;
+				}
+
+				previousRomanNumeralCharacterAsArabic = 5;
 			}
 			if(romanNumeral.charAt(i) == 'I'){
-				createArabicNumberFromRomanNumerals(1);
+				if(previousRomanNumeralCharacterAsArabic > 1){
+					arabicNumber -= 1;
+				}else{
+					arabicNumber = arabicNumber + 1;
+				}
+
+				previousRomanNumeralCharacterAsArabic = 1;
 			}
 		}
 		
@@ -44,6 +80,7 @@ public class RomanToArabicConverter {
 		}else{
 			arabicNumber += arabicNumberValue;
 		}
+
 		previousRomanNumeralCharacterAsArabic = arabicNumberValue;
 	}
 }
