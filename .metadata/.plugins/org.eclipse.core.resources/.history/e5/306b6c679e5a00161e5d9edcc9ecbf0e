@@ -32,10 +32,5 @@ public class RomanToArabicConverterTest {
 	public void testWhenConverterIsPassedMThat1000IsReturned() {
 		assertEquals(1000, new RomanToArabicConverter().convert("M"));
 	}
-	
-	@Test
-	public void testWhenConverterIsPassedMIThat1001IsReturned(){
-		assertEquals(1001, new RomanToArabicConverter().convert("MI"));
-	}
 
 }

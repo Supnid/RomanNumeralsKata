@@ -14,7 +14,7 @@ public class RomanToArabicConverter {
 				
 			
 			if(romanNumeral.charAt(i) == 'M'){
-				if(previousRomanNumeralCharacterAsArabic > 1000){
+				if(previousRomanNumeralCharacterAsArabic < 1000){
 					arabicNumber -= 1000;
 				}else{
 					arabicNumber += 1000;
@@ -22,17 +22,8 @@ public class RomanToArabicConverter {
 
 				previousRomanNumeralCharacterAsArabic = 1000;
 			}
-			if(romanNumeral.charAt(i) == 'D'){
-				if(previousRomanNumeralCharacterAsArabic > 500){
-					arabicNumber -= 500;
-				}else{
-					arabicNumber += 500;
-				}
-
-				previousRomanNumeralCharacterAsArabic = 500;
-			}
 			if(romanNumeral.charAt(i) == 'C'){
-				if(previousRomanNumeralCharacterAsArabic > 100){
+				if(previousRomanNumeralCharacterAsArabic < 100){
 					arabicNumber -= 100;
 				}else{
 					arabicNumber += 100;
@@ -40,8 +31,17 @@ public class RomanToArabicConverter {
 
 				previousRomanNumeralCharacterAsArabic = 100;
 			}
+			if(romanNumeral.charAt(i) == 'D'){
+				if(previousRomanNumeralCharacterAsArabic < 500){
+					arabicNumber -= 500;
+				}else{
+					arabicNumber += 500;
+				}
+
+				previousRomanNumeralCharacterAsArabic = 500;
+			}
 			if(romanNumeral.charAt(i) == 'V'){
-				if(previousRomanNumeralCharacterAsArabic > 5){
+				if(previousRomanNumeralCharacterAsArabic < 5){
 					arabicNumber -= 5;
 				}else{
 					arabicNumber += 5;
@@ -50,7 +50,7 @@ public class RomanToArabicConverter {
 				previousRomanNumeralCharacterAsArabic = 5;
 			}
 			if(romanNumeral.charAt(i) == 'I'){
-				if(previousRomanNumeralCharacterAsArabic > 1){
+				if(previousRomanNumeralCharacterAsArabic < 1){
 					arabicNumber -= 1;
 				}else{
 					arabicNumber += 1;

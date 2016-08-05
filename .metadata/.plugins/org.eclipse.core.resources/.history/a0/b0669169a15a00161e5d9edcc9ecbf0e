@@ -1,0 +1,41 @@
+package main;
+
+public class RomanToArabicConverter {
+
+	public int convert(String romanNumeral) {
+		int romanNumeralLength = romanNumeral.length();
+		int arabicNumber = 0;
+		int previousRomanNumeralCharacterAsArabic = 0;
+		
+		
+		
+		for(int i = romanNumeralLength - 1; i >= 0; i--){
+
+				
+			
+			if(romanNumeral.charAt(i) == 'M'){
+				if(previousRomanNumeralCharacterAsArabic < 1000){
+					arabicNumber -= 1000;
+				}else{
+					arabicNumber += 1000;
+				}
+
+				previousRomanNumeralCharacterAsArabic = 1000;
+			}
+			if(romanNumeral.charAt(i) == 'C'){
+				arabicNumber += 100;
+			}
+			if(romanNumeral.charAt(i) == 'D'){
+				arabicNumber += 500;
+			}
+			if(romanNumeral.charAt(i) == 'V'){
+				arabicNumber += 5;
+			}
+			if(romanNumeral.charAt(i) == 'I'){
+				arabicNumber += 1;
+			}
+		}
+		
+		return arabicNumber;
+	}
+}

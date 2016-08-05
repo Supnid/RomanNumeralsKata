@@ -1,0 +1,27 @@
+package main;
+
+public class RomanToArabicConverter {
+
+	public int convert(String romanNumeral) {
+		int romanNumeralLength = romanNumeral.length();
+		int arabicNumber = 0;
+		
+		System.out.println(romanNumeral.indexOf(0));
+		
+		for(int i = 0; i < romanNumeralLength; i++){
+			if(romanNumeral.equals("M")){
+				arabicNumber += 1000;
+			}else if(romanNumeral.equals("CM")){
+				arabicNumber += 900;
+			}else if(romanNumeral.equals("D")){
+				arabicNumber += 500;
+			}else if(romanNumeral.equals("IV")){
+				arabicNumber += 4;
+			}else{
+				arabicNumber += 1;
+			}
+		}
+		
+		return arabicNumber;
+	}
+}
