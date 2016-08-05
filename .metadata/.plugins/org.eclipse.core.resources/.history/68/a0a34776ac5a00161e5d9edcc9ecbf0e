@@ -34,16 +34,6 @@ public class RomanToArabicConverterTest {
 	}
 	
 	@Test
-	public void testWhenConverterIsPassedXThat10IsReturned() {
-		assertEquals(10, new RomanToArabicConverter().convert("X"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedXLThat40IsReturned() {
-		assertEquals(40, new RomanToArabicConverter().convert("XL"));
-	}
-	
-	@Test
 	public void testWhenConverterIsPassedDThat500IsReturned() {
 		assertEquals(500, new RomanToArabicConverter().convert("D"));
 	}

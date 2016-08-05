@@ -36,15 +36,6 @@ public class RomanToArabicConverter {
 
 				previousRomanNumeralCharacterAsArabic = 100;
 			}
-			if(romanNumeral.charAt(i) == 'L'){
-				if(previousRomanNumeralCharacterAsArabic > 50){
-					arabicNumber -= 50;
-				}else{
-					arabicNumber += 50;
-				}
-
-				previousRomanNumeralCharacterAsArabic = 50;
-			}
 			if(romanNumeral.charAt(i) == 'X'){
 				if(previousRomanNumeralCharacterAsArabic > 10){
 					arabicNumber -= 10;
