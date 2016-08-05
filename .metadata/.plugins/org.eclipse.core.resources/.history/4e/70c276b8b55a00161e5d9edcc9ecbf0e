@@ -7,38 +7,38 @@ public class RomanToArabicConverter {
 	
 	public int convert(String romanNumeral) {
 		String upperCaseRomanNumeralInput = romanNumeral.toUpperCase();
-		if(upperCaseRomanNumeralInput.contains("IIII") || upperCaseRomanNumeralInput.contains("XXXX") 
-				|| upperCaseRomanNumeralInput.contains("CCCC") || upperCaseRomanNumeralInput.contains("MMMM")
-					|| upperCaseRomanNumeralInput.contains("VV") || upperCaseRomanNumeralInput.contains("LL")
-						|| upperCaseRomanNumeralInput.contains("DD")){
+		if(romanNumeral.contains("IIII") || romanNumeral.contains("XXXX") 
+				|| romanNumeral.contains("CCCC") || romanNumeral.contains("MMMM")
+					|| romanNumeral.contains("VV") || romanNumeral.contains("LL")
+						|| romanNumeral.contains("DD")){
 			return -1;
 		}
 		
-		int romanNumeralLength = upperCaseRomanNumeralInput.length();
+		int romanNumeralLength = romanNumeral.length();
 		arabicNumber = 0;
 		previousRomanNumeralCharacterAsArabic = 0;
 		
 		
 		for(int i = romanNumeralLength - 1; i >= 0; i--){
-			if(upperCaseRomanNumeralInput.charAt(i) == 'M'){
+			if(romanNumeral.charAt(i) == 'M'){
 				createArabicNumberFromRomanNumerals(1000);
 			}
-			if(upperCaseRomanNumeralInput.charAt(i) == 'D'){
+			if(romanNumeral.charAt(i) == 'D'){
 				createArabicNumberFromRomanNumerals(500);
 			}
-			if(upperCaseRomanNumeralInput.charAt(i) == 'C'){
+			if(romanNumeral.charAt(i) == 'C'){
 				createArabicNumberFromRomanNumerals(100);
 			}
-			if(upperCaseRomanNumeralInput.charAt(i) == 'L'){
+			if(romanNumeral.charAt(i) == 'L'){
 				createArabicNumberFromRomanNumerals(50);
 			}
-			if(upperCaseRomanNumeralInput.charAt(i) == 'X'){
+			if(romanNumeral.charAt(i) == 'X'){
 				createArabicNumberFromRomanNumerals(10);
 			}
-			if(upperCaseRomanNumeralInput.charAt(i) == 'V'){
+			if(romanNumeral.charAt(i) == 'V'){
 				createArabicNumberFromRomanNumerals(5);
 			}
-			if(upperCaseRomanNumeralInput.charAt(i) == 'I'){
+			if(romanNumeral.charAt(i) == 'I'){
 				createArabicNumberFromRomanNumerals(1);
 			}
 		}

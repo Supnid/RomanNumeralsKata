@@ -52,32 +52,5 @@ public class RomanToArabicConverterTest {
 		assertEquals(-1, converter.convert("VV"));
 		assertEquals(-1, converter.convert("LL"));
 		assertEquals(-1, converter.convert("DD"));
-		
-		assertEquals(-1, converter.convert("iiii"));
-		assertEquals(-1, converter.convert("xxxx"));
-		assertEquals(-1, converter.convert("cccc"));
-		assertEquals(-1, converter.convert("mmmm"));
-		assertEquals(-1, converter.convert("vv"));
-		assertEquals(-1, converter.convert("ll"));
-		assertEquals(-1, converter.convert("dd"));
-	}
-	
-	@Test
-	public void testLowerCaseLettersCanBeInterpretedByTheConverter(){
-		RomanToArabicConverter converter = new RomanToArabicConverter();
-		assertEquals(1, converter.convert("i"));
-		assertEquals(2, converter.convert("ii"));
-		assertEquals(3, converter.convert("iii"));
-		assertEquals(4, converter.convert("iv"));
-		assertEquals(9, converter.convert("ix"));
-		assertEquals(10, converter.convert("x"));
-		assertEquals(40, converter.convert("xl"));
-		assertEquals(50, converter.convert("l"));
-		assertEquals(90, converter.convert("xc"));
-		assertEquals(100, converter.convert("c"));
-		assertEquals(400, converter.convert("cd"));
-		assertEquals(500, converter.convert("d"));
-		assertEquals(900, converter.convert("cm"));
-		assertEquals(1000, converter.convert("m"));
 	}
 }
