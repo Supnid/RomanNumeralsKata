@@ -127,4 +127,20 @@ public class RomanToArabicConverterTest {
 		assertEquals(-1, converter.convert("8"));
 		assertEquals(-1, converter.convert("9"));
 	}
+	
+	@Test
+	public void testNonAlphaNumericCharactersAreRejectedByTheConverter(){
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(-1, converter.convert("~"));
+		assertEquals(-1, converter.convert("!"));
+		assertEquals(-1, converter.convert("@"));
+		assertEquals(-1, converter.convert("#"));
+		assertEquals(-1, converter.convert("$"));
+		assertEquals(-1, converter.convert("%"));
+		assertEquals(-1, converter.convert("^"));
+		assertEquals(-1, converter.convert("&"));
+		assertEquals(-1, converter.convert("*"));
+		assertEquals(-1, converter.convert("("));
+		assertEquals(-1, converter.convert(")"));
+	}
 }

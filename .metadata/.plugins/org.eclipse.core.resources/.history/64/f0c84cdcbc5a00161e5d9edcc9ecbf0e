@@ -1,0 +1,95 @@
+package main;
+
+import java.util.Scanner;
+
+public class RomanToArabicConverter {
+	
+	private int previousRomanNumeralCharacterAsArabic;
+	private int arabicNumber;
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter A Roman Numeral: ");
+		String romanNumeral = scan.next();
+		
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		converter.convert(romanNumeral);
+	}
+	
+	public int convert(String romanNumeral) {
+		String upperCaseRomanNumeralInput = romanNumeral.toUpperCase();
+		
+		//All of the invalid forms of a Roman Numeral
+		if(upperCaseRomanNumeralInput.contains("IIII") || upperCaseRomanNumeralInput.contains("XXXX") 
+				|| upperCaseRomanNumeralInput.contains("CCCC") || upperCaseRomanNumeralInput.contains("MMMM")
+					|| upperCaseRomanNumeralInput.contains("VV") || upperCaseRomanNumeralInput.contains("LL")
+						|| upperCaseRomanNumeralInput.contains("DD") || upperCaseRomanNumeralInput.matches("[A-B]")
+							|| upperCaseRomanNumeralInput.matches("[E-H]") || upperCaseRomanNumeralInput.matches("[J-K]")
+								|| upperCaseRomanNumeralInput.matches("[N-U]") || upperCaseRomanNumeralInput.contains("W")
+									|| upperCaseRomanNumeralInput.matches("[Y-Z]") || upperCaseRomanNumeralInput.matches("[0-9]")
+										|| upperCaseRomanNumeralInput.matches("\\W")){
+			return -1;
+		}
+		
+		int romanNumeralLength = upperCaseRomanNumeralInput.length();
+		arabicNumber = 0;
+		previousRomanNumeralCharacterAsArabic = 0;
+		
+		
+		for(int i = romanNumeralLength - 1; i >= 0; i--){
+			if(upperCaseRomanNumeralInput.charAt(i) == 'M'){
+				createArabicNumberFromRomanNumerals(1000);
+			}
+			if(upperCaseRomanNumeralInput.charAt(i) == 'D'){
+				int tempPreviousRomanNumeralCharacterAsArabic = previousRomanNumeralCharacterAsArabic;
+				
+				createArabicNumberFromRomanNumerals(500);
+				
+				//If true a subtraction occurred. According to the Kata V, L, and D can never be subtracted.
+				if(previousRomanNumeralCharacterAsArabic < tempPreviousRomanNumeralCharacterAsArabic){
+					return -1;
+				}
+			}
+			if(upperCaseRomanNumeralInput.charAt(i) == 'C'){
+				createArabicNumberFromRomanNumerals(100);
+			}
+			if(upperCaseRomanNumeralInput.charAt(i) == 'L'){
+				int tempPreviousRomanNumeralCharacterAsArabic = previousRomanNumeralCharacterAsArabic;
+				
+				createArabicNumberFromRomanNumerals(50);
+				
+				//If true a subtraction occurred. According to the Kata V, L, and D can never be subtracted.
+				if(previousRomanNumeralCharacterAsArabic < tempPreviousRomanNumeralCharacterAsArabic){
+					return -1;
+				}
+			}
+			if(upperCaseRomanNumeralInput.charAt(i) == 'X'){
+				createArabicNumberFromRomanNumerals(10);
+			}
+			if(upperCaseRomanNumeralInput.charAt(i) == 'V'){
+				int tempPreviousRomanNumeralCharacterAsArabic = previousRomanNumeralCharacterAsArabic;
+				
+				createArabicNumberFromRomanNumerals(5);
+				
+				//If true a subtraction occurred. According to the Kata V, L, and D can never be subtracted.
+				if(previousRomanNumeralCharacterAsArabic < tempPreviousRomanNumeralCharacterAsArabic){
+					return -1;
+				}
+			}
+			if(upperCaseRomanNumeralInput.charAt(i) == 'I'){
+				createArabicNumberFromRomanNumerals(1);
+			}
+		}
+		
+		return arabicNumber;
+	}
+	
+	private void createArabicNumberFromRomanNumerals(int arabicNumberValue){
+		if(previousRomanNumeralCharacterAsArabic > arabicNumberValue){
+			arabicNumber -= arabicNumberValue;
+		}else{
+			arabicNumber += arabicNumberValue;
+		}
+		previousRomanNumeralCharacterAsArabic = arabicNumberValue;
+	}
+}

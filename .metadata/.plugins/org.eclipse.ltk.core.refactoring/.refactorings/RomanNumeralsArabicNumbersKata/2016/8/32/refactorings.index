@@ -1,3 +1,6 @@
 1470098949993	Rename package 'ArabicToRomanConverter'
 1470099480313	Delete element
 1470353562970	Delete element
+1470367702016	Extract local variable 'converter'
+1470368069989	Extract local variable 'arabicToRomanConverter'
+1470368335826	Extract local variable 'arabicToRomanConverter'

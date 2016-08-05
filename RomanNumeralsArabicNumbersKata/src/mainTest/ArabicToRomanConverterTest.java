@@ -102,4 +102,13 @@ public class ArabicToRomanConverterTest {
 		assertEquals("MMCCXXII", converter.convert(2222));
 		assertEquals("MMCDXVII", converter.convert(2417));
 	}
+	
+	@Test
+	public void testBooleanValueChangesIfNumberEnteredIsNotValid(){
+		converter.convert(1);
+		assertTrue(converter.getIsValidInput());
+		
+		converter.convert(4567);
+		assertFalse(converter.getIsValidInput());
+	}
 }

@@ -1,12 +1,41 @@
 package main;
 
+import java.util.Scanner;
+
 public class ArabicToRomanConverter {
 
 	private String romanNumeralOutput;
 	private int userInput;
+	private boolean isValidInput;
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a Number: ");
+
+		try {
+			int arabicNumber = scan.nextInt();
+			
+			ArabicToRomanConverter arabicToRomanConverter = new ArabicToRomanConverter();
+			String romanNumeral = arabicToRomanConverter.convert(arabicNumber);
+			
+			if(arabicToRomanConverter.getIsValidInput()){
+				System.out.println("The Arabic Number " + arabicNumber + " was converted to " + romanNumeral);
+			}else{
+				System.out.println(romanNumeral);
+			}
+			
+		} catch (Exception e) {
+			System.out.println("The number you tried to enter was not recognized please try again!");
+		}
+
+		
+
+	}
 	
 	public String convert(int input) {
+		isValidInput = true;
 		if(input > 3999 || input < 1){
+			isValidInput = false;
 			return "The number you entered could not be converted. Please try another number.";
 		}				
 		
@@ -39,6 +68,10 @@ public class ArabicToRomanConverter {
 			romanNumeralOutput += romanNumeral;
 			userInput -= arabicNumber;
 		}
+	}
+
+	public boolean getIsValidInput() {
+		return isValidInput;
 	}
 
 }

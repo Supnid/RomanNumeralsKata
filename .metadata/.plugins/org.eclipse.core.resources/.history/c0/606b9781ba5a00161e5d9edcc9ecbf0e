@@ -1,0 +1,145 @@
+package mainTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import main.RomanToArabicConverter;
+
+public class RomanToArabicConverterTest {
+
+	@Test
+	public void testBaseRomanNumeralsAreConvertedCorrectlyToArabicNumbers(){	
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(1, converter.convert("I"));
+		assertEquals(2, converter.convert("II"));
+		assertEquals(3, converter.convert("III"));
+		assertEquals(4, converter.convert("IV"));
+		assertEquals(9, converter.convert("IX"));
+		assertEquals(10, converter.convert("X"));
+		assertEquals(40, converter.convert("XL"));
+		assertEquals(50, converter.convert("L"));
+		assertEquals(90, converter.convert("XC"));
+		assertEquals(100, converter.convert("C"));
+		assertEquals(400, converter.convert("CD"));
+		assertEquals(500, converter.convert("D"));
+		assertEquals(900, converter.convert("CM"));
+		assertEquals(1000, converter.convert("M"));
+
+	}
+	
+	@Test
+	public void testCombinationsOfRomanNumeralsAreConvertCorrectlyToArabic(){
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(1001, converter.convert("MI"));
+		assertEquals(1066, converter.convert("MLXVI"));
+		assertEquals(1989, converter.convert("MCMLXXXIX"));	
+		assertEquals(3999, converter.convert("MMMCMXCIX"));
+		assertEquals(700, converter.convert("DCC"));
+		assertEquals(1777, converter.convert("MDCCLXXVII"));
+		assertEquals(378, converter.convert("CCCLXXVIII"));
+		assertEquals(2222, converter.convert("MMCCXXII"));
+		assertEquals(2417, converter.convert("MMCDXVII"));
+	}
+	
+	@Test
+	public void testForIncorrectlyFormattedRomanNumeralStrings(){
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(-1, converter.convert("IIII"));
+		assertEquals(-1, converter.convert("XXXX"));
+		assertEquals(-1, converter.convert("CCCC"));
+		assertEquals(-1, converter.convert("MMMM"));
+		assertEquals(-1, converter.convert("VV"));
+		assertEquals(-1, converter.convert("LL"));
+		assertEquals(-1, converter.convert("DD"));
+		
+		assertEquals(-1, converter.convert("iiii"));
+		assertEquals(-1, converter.convert("xxxx"));
+		assertEquals(-1, converter.convert("cccc"));
+		assertEquals(-1, converter.convert("mmmm"));
+		assertEquals(-1, converter.convert("vv"));
+		assertEquals(-1, converter.convert("ll"));
+		assertEquals(-1, converter.convert("dd"));
+	}
+	
+	@Test
+	public void testVAndLAndDAreNeverSubtracted(){
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(-1, converter.convert("VX"));
+		assertEquals(-1, converter.convert("LC"));
+		assertEquals(-1, converter.convert("DM"));
+	}
+	
+	@Test
+	public void testLowerCaseLettersCanBeInterpretedByTheConverter(){
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(1, converter.convert("i"));
+		assertEquals(2, converter.convert("ii"));
+		assertEquals(3, converter.convert("iii"));
+		assertEquals(4, converter.convert("iv"));
+		assertEquals(9, converter.convert("ix"));
+		assertEquals(10, converter.convert("x"));
+		assertEquals(40, converter.convert("xl"));
+		assertEquals(50, converter.convert("l"));
+		assertEquals(90, converter.convert("xc"));
+		assertEquals(100, converter.convert("c"));
+		assertEquals(400, converter.convert("cd"));
+		assertEquals(500, converter.convert("d"));
+		assertEquals(900, converter.convert("cm"));
+		assertEquals(1000, converter.convert("m"));
+	}
+	
+	@Test
+	public void testAnythingBut_I_V_X_L_C_D_M_AreRejectedAsInvalidInputByTheConverter(){
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(-1, converter.convert("A"));
+		assertEquals(-1, converter.convert("B"));
+		assertEquals(-1, converter.convert("E"));
+		assertEquals(-1, converter.convert("F"));
+		assertEquals(-1, converter.convert("G"));
+		assertEquals(-1, converter.convert("H"));
+		assertEquals(-1, converter.convert("J"));
+		assertEquals(-1, converter.convert("K"));
+		assertEquals(-1, converter.convert("N"));
+		assertEquals(-1, converter.convert("O"));
+		assertEquals(-1, converter.convert("P"));
+		assertEquals(-1, converter.convert("Q"));
+		assertEquals(-1, converter.convert("R"));
+		assertEquals(-1, converter.convert("S"));
+		assertEquals(-1, converter.convert("T"));
+		assertEquals(-1, converter.convert("U"));
+		assertEquals(-1, converter.convert("W"));
+		assertEquals(-1, converter.convert("Y"));
+		assertEquals(-1, converter.convert("Z"));
+	}
+	
+	@Test
+	public void testNumbersAreRejectedByTheConverter(){
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(-1, converter.convert("0"));
+		assertEquals(-1, converter.convert("1"));
+		assertEquals(-1, converter.convert("2"));
+		assertEquals(-1, converter.convert("3"));
+		assertEquals(-1, converter.convert("4"));
+		assertEquals(-1, converter.convert("5"));
+		assertEquals(-1, converter.convert("6"));
+		assertEquals(-1, converter.convert("7"));
+		assertEquals(-1, converter.convert("8"));
+		assertEquals(-1, converter.convert("9"));
+	}
+	
+	@Test
+	public void testNonAlphaNumericCharactersAreRejectedByTheConverter(){
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(-1, converter.convert("~"));
+		assertEquals(-1, converter.convert("!"));
+		assertEquals(-1, converter.convert("@"));
+		assertEquals(-1, converter.convert("#"));
+		assertEquals(-1, converter.convert("$"));
+		assertEquals(-1, converter.convert("%"));
+		assertEquals(-1, converter.convert("^"));
+		assertEquals(-1, converter.convert("&"));
+		assertEquals(-1, converter.convert("*"));
+		assertEquals(-1, converter.convert("("));
+	}
+}

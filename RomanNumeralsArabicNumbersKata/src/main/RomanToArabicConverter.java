@@ -1,9 +1,27 @@
 package main;
 
+import java.util.Scanner;
+
 public class RomanToArabicConverter {
 	
 	private int previousRomanNumeralCharacterAsArabic;
 	private int arabicNumber;
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter A Roman Numeral: ");
+		String romanNumeral = scan.next();
+		
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		
+		int arabicNumber = converter.convert(romanNumeral);
+		
+		if(arabicNumber == -1){
+			System.out.println("The Roman Numeral you entered was not in a valid format");
+		}else{
+			System.out.println("The Roman Numeral " + romanNumeral + " was converted to " + arabicNumber);
+		}
+	}
 	
 	public int convert(String romanNumeral) {
 		String upperCaseRomanNumeralInput = romanNumeral.toUpperCase();
@@ -15,7 +33,8 @@ public class RomanToArabicConverter {
 						|| upperCaseRomanNumeralInput.contains("DD") || upperCaseRomanNumeralInput.matches("[A-B]")
 							|| upperCaseRomanNumeralInput.matches("[E-H]") || upperCaseRomanNumeralInput.matches("[J-K]")
 								|| upperCaseRomanNumeralInput.matches("[N-U]") || upperCaseRomanNumeralInput.contains("W")
-									|| upperCaseRomanNumeralInput.matches("[Y-Z]") || upperCaseRomanNumeralInput.matches("[0-9]")){
+									|| upperCaseRomanNumeralInput.matches("[Y-Z]") || upperCaseRomanNumeralInput.matches("[0-9]")
+										|| upperCaseRomanNumeralInput.matches("\\W")){
 			return -1;
 		}
 		
