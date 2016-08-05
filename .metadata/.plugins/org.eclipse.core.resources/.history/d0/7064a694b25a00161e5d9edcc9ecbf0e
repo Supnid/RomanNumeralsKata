@@ -41,10 +41,4 @@ public class RomanToArabicConverterTest {
 		assertEquals(2222, converter.convert("MMCCXXII"));
 		assertEquals(2417, converter.convert("MMCDXVII"));
 	}
-	
-	@Test
-	public void testForIncorrectlyFormattedRomanNumeralStrings(){
-		RomanToArabicConverter converter = new RomanToArabicConverter();
-		assertEquals(-1, converter.convert("IIII"));
-	}
 }

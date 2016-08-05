@@ -6,10 +6,6 @@ public class RomanToArabicConverter {
 	private int arabicNumber;
 	
 	public int convert(String romanNumeral) {
-		if(romanNumeral.contains("IIII")){
-			return -1;
-		}
-		
 		int romanNumeralLength = romanNumeral.length();
 		arabicNumber = 0;
 		previousRomanNumeralCharacterAsArabic = 0;
