@@ -45,22 +45,7 @@ public class RomanToArabicConverterTest {
 	
 	@Test
 	public void testWhenConverterIsPassedLThat50IsReturned() {
-		assertEquals(50, new RomanToArabicConverter().convert("L"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedXCThat90IsReturned() {
-		assertEquals(90, new RomanToArabicConverter().convert("XC"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedCThat100IsReturned() {
-		assertEquals(100, new RomanToArabicConverter().convert("C"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedCDThat400IsReturned() {
-		assertEquals(400, new RomanToArabicConverter().convert("CD"));
+		assertEquals(40, new RomanToArabicConverter().convert("L"));
 	}
 	
 	@Test
