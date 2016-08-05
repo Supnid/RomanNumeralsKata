@@ -46,6 +46,5 @@ public class RomanToArabicConverterTest {
 	public void testForIncorrectlyFormattedRomanNumeralStrings(){
 		RomanToArabicConverter converter = new RomanToArabicConverter();
 		assertEquals(-1, converter.convert("IIII"));
-		assertEquals(-1, converter.convert("XXXX"));
 	}
 }
