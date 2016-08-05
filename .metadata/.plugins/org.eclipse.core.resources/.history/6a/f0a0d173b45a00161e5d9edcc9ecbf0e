@@ -6,7 +6,7 @@ public class RomanToArabicConverter {
 	private int arabicNumber;
 	
 	public int convert(String romanNumeral) {
-		if(romanNumeral.contains("IIII") || romanNumeral.contains("XXXX") || romanNumeral.contains("CCCC") || romanNumeral.contains("MMMM")){
+		if(romanNumeral.contains("IIII") || romanNumeral.contains("XXXX") || romanNumeral.contains("CCCC")){
 			return -1;
 		}
 		

@@ -48,6 +48,5 @@ public class RomanToArabicConverterTest {
 		assertEquals(-1, converter.convert("IIII"));
 		assertEquals(-1, converter.convert("XXXX"));
 		assertEquals(-1, converter.convert("CCCC"));
-		assertEquals(-1, converter.convert("MMMM"));
 	}
 }
