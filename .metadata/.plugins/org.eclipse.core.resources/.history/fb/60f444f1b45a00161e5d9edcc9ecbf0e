@@ -8,8 +8,7 @@ public class RomanToArabicConverter {
 	public int convert(String romanNumeral) {
 		if(romanNumeral.contains("IIII") || romanNumeral.contains("XXXX") 
 				|| romanNumeral.contains("CCCC") || romanNumeral.contains("MMMM")
-					|| romanNumeral.contains("VV") || romanNumeral.contains("LL")
-						|| romanNumeral.contains("DD")){
+					|| romanNumeral.contains("VV") || romanNumeral.contains("LL")){
 			return -1;
 		}
 		
