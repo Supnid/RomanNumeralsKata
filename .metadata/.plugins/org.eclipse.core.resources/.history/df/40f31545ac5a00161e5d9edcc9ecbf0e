@@ -30,7 +30,7 @@ public class RomanToArabicConverterTest {
 	
 	@Test
 	public void testWhenConverterIsPassedIXThat9IsReturned() {
-		assertEquals(9, new RomanToArabicConverter().convert("IX"));
+		assertEquals(4, new RomanToArabicConverter().convert("IX"));
 	}
 	
 	@Test

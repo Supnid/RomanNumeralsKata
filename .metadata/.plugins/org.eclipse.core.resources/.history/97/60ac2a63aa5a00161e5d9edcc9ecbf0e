@@ -8,7 +8,11 @@ public class RomanToArabicConverter {
 		int previousRomanNumeralCharacterAsArabic = 0;
 		
 		
+		
 		for(int i = romanNumeralLength - 1; i >= 0; i--){
+
+				
+			
 			if(romanNumeral.charAt(i) == 'M'){
 				if(previousRomanNumeralCharacterAsArabic > 1000){
 					arabicNumber -= 1000;
@@ -36,15 +40,6 @@ public class RomanToArabicConverter {
 
 				previousRomanNumeralCharacterAsArabic = 100;
 			}
-			if(romanNumeral.charAt(i) == 'X'){
-				if(previousRomanNumeralCharacterAsArabic > 10){
-					arabicNumber -= 10;
-				}else{
-					arabicNumber += 10;
-				}
-
-				previousRomanNumeralCharacterAsArabic = 5;
-			}
 			if(romanNumeral.charAt(i) == 'V'){
 				if(previousRomanNumeralCharacterAsArabic > 5){
 					arabicNumber -= 5;
@@ -58,7 +53,7 @@ public class RomanToArabicConverter {
 				if(previousRomanNumeralCharacterAsArabic > 1){
 					arabicNumber -= 1;
 				}else{
-					arabicNumber = arabicNumber + 1;
+					arabicNumber += 1;
 				}
 
 				previousRomanNumeralCharacterAsArabic = 1;

@@ -29,11 +29,6 @@ public class RomanToArabicConverterTest {
 	}
 	
 	@Test
-	public void testWhenConverterIsPassedIXThat9IsReturned() {
-		assertEquals(9, new RomanToArabicConverter().convert("IX"));
-	}
-	
-	@Test
 	public void testWhenConverterIsPassedDThat500IsReturned() {
 		assertEquals(500, new RomanToArabicConverter().convert("D"));
 	}

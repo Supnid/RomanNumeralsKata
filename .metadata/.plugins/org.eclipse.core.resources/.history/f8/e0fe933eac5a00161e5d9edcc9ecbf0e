@@ -37,7 +37,7 @@ public class RomanToArabicConverter {
 				previousRomanNumeralCharacterAsArabic = 100;
 			}
 			if(romanNumeral.charAt(i) == 'X'){
-				if(previousRomanNumeralCharacterAsArabic > 10){
+				if(previousRomanNumeralCharacterAsArabic > 5){
 					arabicNumber -= 10;
 				}else{
 					arabicNumber += 10;

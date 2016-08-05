@@ -14,23 +14,8 @@ public class RomanToArabicConverterTest {
 	}
 	
 	@Test
-	public void testWhenConverterIsPassedIIThat2IsReturned() {
-		assertEquals(2, new RomanToArabicConverter().convert("II"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedIIIThat3IsReturned() {
-		assertEquals(3, new RomanToArabicConverter().convert("III"));
-	}
-	
-	@Test
 	public void testWhenConverterIsPassedIVThat4IsReturned() {
 		assertEquals(4, new RomanToArabicConverter().convert("IV"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedIXThat9IsReturned() {
-		assertEquals(9, new RomanToArabicConverter().convert("IX"));
 	}
 	
 	@Test

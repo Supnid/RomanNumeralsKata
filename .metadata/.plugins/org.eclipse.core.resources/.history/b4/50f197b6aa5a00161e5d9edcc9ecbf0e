@@ -36,15 +36,6 @@ public class RomanToArabicConverter {
 
 				previousRomanNumeralCharacterAsArabic = 100;
 			}
-			if(romanNumeral.charAt(i) == 'X'){
-				if(previousRomanNumeralCharacterAsArabic > 10){
-					arabicNumber -= 10;
-				}else{
-					arabicNumber += 10;
-				}
-
-				previousRomanNumeralCharacterAsArabic = 5;
-			}
 			if(romanNumeral.charAt(i) == 'V'){
 				if(previousRomanNumeralCharacterAsArabic > 5){
 					arabicNumber -= 5;
@@ -55,10 +46,14 @@ public class RomanToArabicConverter {
 				previousRomanNumeralCharacterAsArabic = 5;
 			}
 			if(romanNumeral.charAt(i) == 'I'){
+				System.out.println("HELLO");
 				if(previousRomanNumeralCharacterAsArabic > 1){
+					System.out.println("HELLO-1");
 					arabicNumber -= 1;
 				}else{
-					arabicNumber = arabicNumber + 1;
+					System.out.println("HELLO+1");
+					System.out.println(arabicNumber);
+					arabicNumber += 1;
 				}
 
 				previousRomanNumeralCharacterAsArabic = 1;
