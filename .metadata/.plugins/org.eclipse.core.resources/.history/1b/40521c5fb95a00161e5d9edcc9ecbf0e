@@ -7,8 +7,6 @@ public class RomanToArabicConverter {
 	
 	public int convert(String romanNumeral) {
 		String upperCaseRomanNumeralInput = romanNumeral.toUpperCase();
-		
-		//All of the invalid forms of a Roman Numeral
 		if(upperCaseRomanNumeralInput.contains("IIII") || upperCaseRomanNumeralInput.contains("XXXX") 
 				|| upperCaseRomanNumeralInput.contains("CCCC") || upperCaseRomanNumeralInput.contains("MMMM")
 					|| upperCaseRomanNumeralInput.contains("VV") || upperCaseRomanNumeralInput.contains("LL")

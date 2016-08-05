@@ -88,29 +88,4 @@ public class RomanToArabicConverterTest {
 		assertEquals(900, converter.convert("cm"));
 		assertEquals(1000, converter.convert("m"));
 	}
-	
-	@Test
-	public void testAnythingBut_I_V_X_L_C_D_M_AreRejectedAsInvalidInputByTheConverter(){
-		RomanToArabicConverter converter = new RomanToArabicConverter();
-		assertEquals(-1, converter.convert("A"));
-		assertEquals(-1, converter.convert("B"));
-		assertEquals(-1, converter.convert("E"));
-		assertEquals(-1, converter.convert("F"));
-		assertEquals(-1, converter.convert("G"));
-		assertEquals(-1, converter.convert("H"));
-		assertEquals(-1, converter.convert("J"));
-		assertEquals(-1, converter.convert("K"));
-		assertEquals(-1, converter.convert("N"));
-		assertEquals(-1, converter.convert("O"));
-		assertEquals(-1, converter.convert("P"));
-		assertEquals(-1, converter.convert("Q"));
-		assertEquals(-1, converter.convert("R"));
-		assertEquals(-1, converter.convert("S"));
-		assertEquals(-1, converter.convert("T"));
-		assertEquals(-1, converter.convert("U"));
-		assertEquals(-1, converter.convert("W"));
-		assertEquals(-1, converter.convert("Y"));
-		assertEquals(-1, converter.convert("Z"));
-		
-	}
 }

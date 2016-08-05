@@ -7,15 +7,11 @@ public class RomanToArabicConverter {
 	
 	public int convert(String romanNumeral) {
 		String upperCaseRomanNumeralInput = romanNumeral.toUpperCase();
-		
-		//All of the invalid forms of a Roman Numeral
 		if(upperCaseRomanNumeralInput.contains("IIII") || upperCaseRomanNumeralInput.contains("XXXX") 
 				|| upperCaseRomanNumeralInput.contains("CCCC") || upperCaseRomanNumeralInput.contains("MMMM")
 					|| upperCaseRomanNumeralInput.contains("VV") || upperCaseRomanNumeralInput.contains("LL")
 						|| upperCaseRomanNumeralInput.contains("DD") || upperCaseRomanNumeralInput.matches("[A-B]")
-							|| upperCaseRomanNumeralInput.matches("[E-H]") || upperCaseRomanNumeralInput.matches("[J-K]")
-								|| upperCaseRomanNumeralInput.matches("[N-U]") || upperCaseRomanNumeralInput.contains("W")
-									|| upperCaseRomanNumeralInput.matches("[Y-Z]")){
+							|| upperCaseRomanNumeralInput.matches("[E-H]")){
 			return -1;
 		}
 		
