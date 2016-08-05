@@ -4,7 +4,6 @@ INDEX VERSION 1.127+C:\RomanNumeralsKata\.metadata\.plugins\org.eclipse.jdt.core
 4135478709.index
 3150109421.index
 3620173291.index
-2434907573.index
 3425653186.index
 322690031.index
 4247270281.index
