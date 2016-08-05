@@ -9,78 +9,23 @@ import main.RomanToArabicConverter;
 public class RomanToArabicConverterTest {
 
 	@Test
-	public void testWhenConverterIsPassedIThat1IsReturned() {
-		assertEquals(1, new RomanToArabicConverter().convert("I"));
+	public void testBaseRomanNumeralsAreConvertedCorrectlyToArabicNumbers()
+	{	
+		RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(1, converter.convert("I"));
+		assertEquals(2, converter.convert("II"));
+		assertEquals(3, converter.convert("III"));
+		assertEquals(4, converter.convert("IV"));
+		assertEquals(9, converter.convert("IX"));
+		assertEquals(10, converter.convert("X"));
+		assertEquals(40, converter.convert("XL"));
+		assertEquals(50, converter.convert("L"));
+		assertEquals(90, converter.convert("XC"));
+		assertEquals(100, converter.convert("C"));
+		assertEquals(400, converter.convert("CD"));
+		assertEquals(500, converter.convert("D"));
+		assertEquals(900, converter.convert("CM"));
+		assertEquals(1000, converter.convert("M"));
+		assertEquals(1001, converter.convert("MI"));
 	}
-	
-	@Test
-	public void testWhenConverterIsPassedIIThat2IsReturned() {
-		assertEquals(2, new RomanToArabicConverter().convert("II"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedIIIThat3IsReturned() {
-		assertEquals(3, new RomanToArabicConverter().convert("III"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedIVThat4IsReturned() {
-		assertEquals(4, new RomanToArabicConverter().convert("IV"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedIXThat9IsReturned() {
-		assertEquals(9, new RomanToArabicConverter().convert("IX"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedXThat10IsReturned() {
-		assertEquals(10, new RomanToArabicConverter().convert("X"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedXLThat40IsReturned() {
-		assertEquals(40, new RomanToArabicConverter().convert("XL"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedLThat50IsReturned() {
-		assertEquals(50, new RomanToArabicConverter().convert("L"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedXCThat90IsReturned() {
-		assertEquals(90, new RomanToArabicConverter().convert("XC"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedCThat100IsReturned() {
-		assertEquals(100, new RomanToArabicConverter().convert("C"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedCDThat400IsReturned() {
-		assertEquals(400, new RomanToArabicConverter().convert("CD"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedDThat500IsReturned() {
-		assertEquals(500, new RomanToArabicConverter().convert("D"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedCMThat900IsReturned() {
-		assertEquals(900, new RomanToArabicConverter().convert("CM"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedMThat1000IsReturned() {
-		assertEquals(1000, new RomanToArabicConverter().convert("M"));
-	}
-	
-	@Test
-	public void testWhenConverterIsPassedMIThat1001IsReturned(){
-		assertEquals(1001, new RomanToArabicConverter().convert("MI"));
-	}
-
 }

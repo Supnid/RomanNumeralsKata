@@ -1,0 +1,30 @@
+package mainTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import main.RomanToArabicConverter;
+
+public class RomanToArabicConverterTest {
+
+	@Test
+	public void testBaseRomanNumeralsAreConvertedCorrectlyToArabicNumbers()
+	{	RomanToArabicConverter converter = new RomanToArabicConverter();
+		assertEquals(1, converter.convert("I"));
+		assertEquals(2, converter.convert("II"));
+		assertEquals(3, converter.convert("III"));
+		assertEquals(4, new RomanToArabicConverter().convert("IV"));
+		assertEquals(9, new RomanToArabicConverter().convert("IX"));
+		assertEquals(10, new RomanToArabicConverter().convert("X"));
+		assertEquals(40, new RomanToArabicConverter().convert("XL"));
+		assertEquals(50, new RomanToArabicConverter().convert("L"));
+		assertEquals(90, new RomanToArabicConverter().convert("XC"));
+		assertEquals(100, new RomanToArabicConverter().convert("C"));
+		assertEquals(400, new RomanToArabicConverter().convert("CD"));
+		assertEquals(500, new RomanToArabicConverter().convert("D"));
+		assertEquals(900, new RomanToArabicConverter().convert("CM"));
+		assertEquals(1000, new RomanToArabicConverter().convert("M"));
+		assertEquals(1001, new RomanToArabicConverter().convert("MI"));
+	}
+}
