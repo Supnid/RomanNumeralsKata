@@ -63,14 +63,6 @@ public class RomanToArabicConverterTest {
 	}
 	
 	@Test
-	public void testVAndLAndDAreNeverSubtracted(){
-		RomanToArabicConverter converter = new RomanToArabicConverter();
-		assertEquals(-1, converter.convert("VX"));
-		assertEquals(-1, converter.convert("LC"));
-		assertEquals(-1, converter.convert("DM"));
-	}
-	
-	@Test
 	public void testLowerCaseLettersCanBeInterpretedByTheConverter(){
 		RomanToArabicConverter converter = new RomanToArabicConverter();
 		assertEquals(1, converter.convert("i"));

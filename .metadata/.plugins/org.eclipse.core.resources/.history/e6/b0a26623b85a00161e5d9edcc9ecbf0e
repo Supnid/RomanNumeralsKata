@@ -25,7 +25,6 @@ public class RomanToArabicConverter {
 			}
 			if(upperCaseRomanNumeralInput.charAt(i) == 'D'){
 				int tempPreviousRomanNumeralCharacterAsArabic = previousRomanNumeralCharacterAsArabic;
-				
 				createArabicNumberFromRomanNumerals(500);
 				
 				//If true a subtraction occurred. According to the Kata V, L, and D can never be subtracted.
@@ -37,27 +36,13 @@ public class RomanToArabicConverter {
 				createArabicNumberFromRomanNumerals(100);
 			}
 			if(upperCaseRomanNumeralInput.charAt(i) == 'L'){
-				int tempPreviousRomanNumeralCharacterAsArabic = previousRomanNumeralCharacterAsArabic;
-				
 				createArabicNumberFromRomanNumerals(50);
-				
-				//If true a subtraction occurred. According to the Kata V, L, and D can never be subtracted.
-				if(previousRomanNumeralCharacterAsArabic < tempPreviousRomanNumeralCharacterAsArabic){
-					return -1;
-				}
 			}
 			if(upperCaseRomanNumeralInput.charAt(i) == 'X'){
 				createArabicNumberFromRomanNumerals(10);
 			}
 			if(upperCaseRomanNumeralInput.charAt(i) == 'V'){
-				int tempPreviousRomanNumeralCharacterAsArabic = previousRomanNumeralCharacterAsArabic;
-				
 				createArabicNumberFromRomanNumerals(5);
-				
-				//If true a subtraction occurred. According to the Kata V, L, and D can never be subtracted.
-				if(previousRomanNumeralCharacterAsArabic < tempPreviousRomanNumeralCharacterAsArabic){
-					return -1;
-				}
 			}
 			if(upperCaseRomanNumeralInput.charAt(i) == 'I'){
 				createArabicNumberFromRomanNumerals(1);
